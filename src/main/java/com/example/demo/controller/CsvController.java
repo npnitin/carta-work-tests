@@ -18,7 +18,7 @@ public class CsvController {
 
 
     @PostMapping(value = "", consumes = "multipart/form-data")
-    public ResponseEntity<ResponseDTO> getAvgByColumn(@RequestParam("file") MultipartFile file, @RequestParam("column") String column){
+    public ResponseEntity<ResponseDTO> getAvgByColumn(@RequestParam("data") MultipartFile file, @RequestParam("column") String column){
        ResponseDTO responseDTO = new ResponseDTO();
        try{
            if(file == null || column == null || column.isEmpty()){
